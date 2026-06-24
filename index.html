@@ -11,12 +11,14 @@
  
     <!-- MENU -->
     <nav class="menu">
-        <div class="logo">🍔 Sabor Grill</div>
+        <div class="logo">🍔 Brasa Paulista</div>
  
         <div class="links">
             <a href="#inicio">Início</a>
             <a href="#cardapio">Cardápio</a>
             <a href="#promocoes">Promoções</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#galeria">Galeria</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </div>
@@ -36,7 +38,7 @@
         </div>
     </section>
  
-    <!-- CARDÁPIO -->
+   <!-- CARDÁPIO -->
     <section id="cardapio" class="cardapio">
  
         <h2>Nosso Cardápio</h2>
@@ -55,6 +57,9 @@
                 </p>
  
                 <span>R$ 24,90</span>
+                <button onclick="adicionarPedido('X-Burger', 24.90)">
+                 Adicionar ao Pedido
+                </button>
             </div>
  
             <div class="card">
@@ -69,6 +74,9 @@
                 </p>
  
                 <span>R$ 29,90</span>
+                <button onclick="adicionarPedido('X Bacon', 29.90)">
+                  Adicionar ao Pedido
+                </button>
             </div>
  
             <div class="card">
@@ -83,12 +91,16 @@
                 </p>
  
                 <span>R$ 34,90</span>
+                <button onclick="adicionarPedido('Duplo Grill', 34.90)">
+ 
+                Adicionar ao Pedido
+                </button>
             </div>
  
         </div>
  
     </section>
- 
+
     <!-- PROMOÇÕES -->
     <section id="promocoes" class="promocoes">
  
@@ -105,6 +117,51 @@
         </div>
  
     </section>
+
+    <!--DIFERENCIAIS-->
+    <section id="Diferenciais" class="Diferenciais">
+
+        <h2> Por que escolher o Brasa Paulista?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+               <h3>Carne Artesanal</h3>
+               <p>
+                  Promoções próprias com ingredientes selecionados.
+            </p>
+        </div>
+
+    <div class="cards"></div>
+         <div class="card">
+               <h3>Delivery Rapido</h3>
+               <p>
+                entrega rapida e segura para toda a região
+            </p>
+        </div>
+
+        <div class="cards"></div>
+         <div class="card">
+               <h3>Atendimento Nota 10</h3>
+               <p>
+                clientes satisfeitos em cada pedido
+            </p>
+        </div>
+
+    </section>
+
+    <!-- GALERIA -->
+<section class="galeria">
+   <h2>Galeria Sabor Grill</h2>
+
+<div class="fotos">
+    <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500">
+    <img src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?w=500">
+    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=500">
+   </div>
+</section>
+
+<script src="script.js"></script>
  
     <!-- SOBRE -->
     <section id="sobre" class="sobre">
@@ -149,6 +206,18 @@
 </div>
 </div>
 </section>
+
+<!-- CARRINHO -->
+<section class="carrinho">
+<h2>Meu Pedido</h2>
+<ul id="lista-pedidos"></ul>
+<p class="total">
+       Total: R$ <span id="total">0,00</span>
+</p>
+<button onclick="finalizarPedido()">
+       Finalizar Pedido
+</button>
+</section>
  
 <!-- CONTATO -->
 <section id="contato" class="contato">
@@ -167,7 +236,20 @@
 </button>
 </form>
 </section>
- 
+
+ <div class ="contato-conteudo" >
+        <div class="mapa">
+<h3>📍 Nossa Localização</h3>
+<iframe
+       src="https://www.google.com/maps?
+q=Rua%20das%20Del%C3%ADcias%2C%20123%20-
+%20S%C3%A3o%20Paulo&output=embed"
+       allowfullscreen=""
+       loading="lazy"
+       referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
 <!-- RODAPÉ -->
 <footer>
 <h3>🍔 Hamburgueria Sabor Grill</h3>
@@ -181,6 +263,7 @@
   class="whatsapp"
   target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 </body>
 </html>
